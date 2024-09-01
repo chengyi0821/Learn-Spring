@@ -21,48 +21,31 @@
 	</properties>
 
 	<dependencies>
-		<dependency><!-- ＠用途說明2: Add typical dependencies for a web application -->
+		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 
-		<dependency><!-- ＠用途說明3: marked the embedded servlet container as
-			provided -->
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-tomcat</artifactId>
-			<scope>provided</scope>
-		</dependency>
-		<dependency><!-- ＠用途說明4: test -->
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-test</artifactId>
-			<scope>test</scope>
+
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
 		</dependency>
 
-
-		<!-- 用途說明5: Starter for using Spring Data JPA with Hibernate -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
 		</dependency>
 
-		<!-- 用途說明6: for log4j.properties -->
-		<!-- Spring Boot日誌系統預設是使用logback -->
-		<!-- 對於習慣了log4j的開發者，Spring Boot依然有很好的支援 -->
-		<!-- 不過我們在引入log4j之前，需要先排除該logback jar的依賴，再引入log4j的依賴，如下所示: -->
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter</artifactId>
-			<exclusions>
-				<exclusion>
-					<groupId>org.springframework.boot</groupId>
-					<artifactId>spring-boot-starter-logging</artifactId>
-				</exclusion>
-			</exclusions>
-		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-log4j2</artifactId>
-			<!-- <version>2.7.0</version> -->
+		</dependency>
+
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<scope>provided</scope>
 		</dependency>
 
 		<!--
@@ -92,6 +75,7 @@
 			<artifactId>hibernate-proxool</artifactId>
 			<!-- <version>5.6.9.Final</version> -->
 		</dependency>
+
 
 
 		<!--
@@ -191,26 +175,12 @@
 
 		<!--
 		========================================================================================== -->
-		<!-- ●以下為 thymeleaf 預備使用● -->
-
-		<!-- thymeleaf -->
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-thymeleaf</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>nz.net.ultraq.thymeleaf</groupId>
-			<artifactId>thymeleaf-layout-dialect</artifactId>
-		</dependency>
-
-		<!-- hot swapping, disable cache for template, enable live reload -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>
 			<optional>true</optional>
 		</dependency>
 
-		<!-- Optional, for bootstrap -->
 		<dependency>
 			<groupId>org.webjars</groupId>
 			<artifactId>bootstrap</artifactId>
