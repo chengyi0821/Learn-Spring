@@ -1,19 +1,21 @@
 package com.tia102g4.common.response;
 
 import lombok.AllArgsConstructor;
+import lombok.Data;
 import lombok.RequiredArgsConstructor;
 
 import java.util.List;
 
 @RequiredArgsConstructor
 @AllArgsConstructor
+@Data
 public class PageResponse<T> {
 
     private List<T> value;
 
-    private Long currentPage;
+    private Integer currentPage;
 
-    private Long pageTotal;
+    private Integer pageTotal;
 
-    private Long count;
+    private Integer size;
 }

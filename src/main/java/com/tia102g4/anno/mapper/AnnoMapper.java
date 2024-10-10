@@ -32,7 +32,7 @@ public class AnnoMapper {
 		} catch (NullPointerException e) {
 			System.out.println("日期為空值");
 		}
-		anno.setAnnoId(reqTO.getId());
+		anno.setAnnoId(reqTO.getAnnoId());
 		anno.setHeading(reqTO.getHeading());
 		anno.setContent(reqTO.getContent());
 		anno.setType(reqTO.getType().getTypeId());
@@ -45,7 +45,7 @@ public class AnnoMapper {
 	public AnnoReqTO setAnnoReqTO(Anno anno) {
 
 		AnnoReqTO reqTO = new AnnoReqTO();
-		reqTO.setId(anno.getAnnoId());
+		reqTO.setAnnoId(anno.getAnnoId());
 		reqTO.setStartDate(dateFormat.format(anno.getStartDate()));
 		reqTO.setEndDate(dateFormat.format(anno.getEndDate()));
 		reqTO.setHeading(anno.getHeading());

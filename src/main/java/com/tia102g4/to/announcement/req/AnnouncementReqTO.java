@@ -1,11 +1,13 @@
 package com.tia102g4.to.announcement.req;
 
 import common.AnnoType;
+import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.Value;
 
 import javax.validation.constraints.NotNull;
 
+@Data
 @Value
 @NoArgsConstructor(force = true)
 public class AnnouncementReqTO {
