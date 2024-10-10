@@ -47,6 +47,10 @@ public class announcementController {
 
     @PostMapping("console/query")
     public List<AnnouncementRespTO> getCompositeAnnosQuery(@RequestBody Map<String, String> map) {
-    	return announcementService.getAnnosByCompositeQuery(map);
+        try {
+            return announcementService.getAnnosByCompositeQuery(map);
+        } catch (Exception e){
+            throw new RuntimeException();
+        }
     }
 }

@@ -49,4 +49,5 @@ public class Announcement {
 
     @Column(name = "deleted")
     private Boolean deleted; //刪除狀態
+
 }
